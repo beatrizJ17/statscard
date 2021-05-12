@@ -1,0 +1,196 @@
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	background-color: hsl(233, 47%, 7%);
+	font-size: 15px;
+}
+
+h1 {
+	font-family: "Lexend Deca";
+	font-weight: 400, 700;
+	color: hsl(0, 0%, 100%);
+	font-size: 30px;
+
+}
+
+p {
+	font-family: "Inter";
+	font-weight: 400;
+	color: hsla(0, 0%, 100%, 0.6);
+	font-size: 15px;
+}
+
+span {
+	color: hsl(277, 64%, 61%);
+}
+
+img {
+	width: 100%;
+	height: 100%;
+	border-radius: 0px 10px 10px 0px;
+}
+
+
+.grid-conteiner {
+	display: grid;
+	grid-template-columns: repeat(2, 35%);
+	justify-content: center;
+	align-content: center;
+	height: 100%;
+}
+
+
+.context {
+	background-color: hsl(244, 38%, 16%);
+	border-radius: 10px 0px 0px 10px;
+	padding: 3rem;
+}
+
+
+.grid-todo {
+	display: grid;
+	grid-template:
+        "numero1	numero2		numero3"
+        "def1		def2		def3" auto;
+	color: hsl(0, 0%, 100%);
+	margin-top: 80px;
+}
+
+.numero {
+	font-family: "Inter";
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.def {
+	color: hsla(0, 0%, 100%, 0.6);
+	font-family: "Inter";
+	text-transform: uppercase;
+	font-size: 15px;
+}
+
+.imagen {
+	min-height: 20rem;
+	/*width: 540px;*/
+	min-width: 200px;
+	background: url(images/image-header-desktop.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 0 10px 10px 0;
+	overflow: hidden;
+}
+
+.overlay {
+	background: hsl(277deg, 100%, 50%, 0.42);
+	height: 100%;
+}
+
+.overlay-3 {
+	background: hsl(293deg, 42%, 35%, 0.24);
+	height: 100%;
+	mix-blend-mode: color-burn;
+}
+
+.attribution { 
+	font-size: 11px; 
+	text-align: center;
+	color: white;
+}
+
+.attribution a { 
+	color: hsl(228, 45%, 44%); 
+}
+
+.def1 {
+	grid-area: def1;
+}
+
+.def2 {
+   grid-area: def2;
+}
+
+.def3 {
+	grid-area: def3;
+}
+
+.numero1 {
+	grid-area: numero1;
+}
+
+.numero2 {
+	grid-area: numero2;
+}
+
+.numero3 {
+	grid-area: numero3;
+}
+
+
+*{
+	box-sizing: border-box;
+	margin:0;
+	padding: 0;
+}
+
+/*************************************
+CAMBIOS LA APARIENCIA DE TELÉFONO
+**************************************/
+@media (max-width: 375px) {
+     .grid-conteiner {
+
+     	display: grid;
+     	grid-template:
+            "B"
+            "A" auto;
+     	grid-template-columns: 95%;
+     	grid-template-rows: repeat(3, auto);
+     	height: auto;
+     	margin-top: 5rem ;
+     }
+     
+     .grid-container > * {
+	box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+	border-radius: 4px;
+	padding: 15px;
+	text-align: center;
+}
+
+    .grid-todo {
+	   grid-template:
+	   "numero1"  
+	   "def1"     
+	   "numero2" 
+	   "def2"	 
+	   "numero3" 
+	   "def3" auto;
+	   margin-top: 40px;
+	   text-align: center;
+
+}
+
+  .imagen {
+	grid-template-columns: auto auto;
+	grid-template-rows: auto auto;
+	border-radius: 10px 10px 0px 0px;
+	grid-row-start: 1;
+  }
+
+  .context {
+	border-radius: 0px 0px 10px 10px;
+	padding: 3rem;
+	}
+
+	.numero, .def {
+		margin: 8px;
+	}
+}
+
+
+
+/************************************************/
+
+
+
